@@ -1,15 +1,16 @@
 export default function Header() {
-
   return (
-    <header className="bg-green text-white py-12">
+    <header className="bg-green text-white py-8">
       <div className="text-center">
-        <h1 className="font-playfair text-8xl font-bold">Nick Pollett</h1>
-        <p className="font-montserrat text-3xl mt-2 font-light tracking-widest">Software Developer</p>
+        <h1 className="font-playfair text-7xl font-bold">Nick Pollett</h1>
+        <p className="font-montserrat text-2xl mt-1 font-light tracking-widest">
+          Software Developer
+        </p>
       </div>
 
-      <div className="w-96 h-px bg-white mx-auto mt-6"></div>
+      <div className="w-80 h-px bg-white mx-auto mt-4"></div>
 
-      <nav className="flex justify-center space-x-20 pt-12">
+      <nav className="flex justify-center space-x-16 pt-6">
         <a
           href="https://www.linkedin.com/in/nicholas-pollett-2a7692234/"
           className="hover:opacity-75 transition-opacity duration-200"
