@@ -1,0 +1,22 @@
+/* Fonts:
+    Sans Serif - Oswald Bold Header
+           - Montserrat Regular P
+    Serif      - Playfair Display Black
+
+Colors:
+    Background - #222222
+    Accent - #6a6548 */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;500&display=swap');
+
+.slick-dots li button:before {
+  @apply text-white opacity-50;
+}
+
+.slick-dots li.slick-active button:before {
+  @apply text-white opacity-100;
+}
+
+
+
