@@ -117,7 +117,7 @@ export default function About() {
               <p className="text-white mt-1">Managed financing approvals and warranties, contributing to record-breaking sales.</p>
             </div>
             <div>
-              <h4 className="text-lg text-gold font-semibold">Customer Experience Manager</h4>
+              <h4 className="text-lg text-gold font-semibold">CXC Manager</h4>
               <p className="text-white text-opacity-80 text-sm">FFUN Motor Group • Sep 2018–Aug 2021</p>
               <p className="text-white mt-1">Achieved over 80% lead conversion and trained staff to exceed performance goals.</p>
             </div>
