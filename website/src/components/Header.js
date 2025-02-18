@@ -3,9 +3,9 @@ export default function Header() {
     <header className="bg-green text-white py-8">
       <div className="text-center">
         <h1 className="font-playfair text-7xl font-bold">Nick Pollett</h1>
-        <p className="font-montserrat text-2xl mt-1 font-light tracking-widest">
-          Software Developer
-        </p>
+        <p className="font-montserrat text-l mt-1 font-light tracking-widest">
+  Software Developer · Saskatoon, SK
+</p>
       </div>
 
       <div className="w-80 h-px bg-white mx-auto mt-4"></div>
@@ -38,6 +38,7 @@ export default function Header() {
         <a
           href="/resume.pdf"
           className="hover:opacity-75 transition-opacity duration-200"
+          download="Resume.pdf"
         >
           Resume
         </a>
