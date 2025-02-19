@@ -60,10 +60,13 @@ export default function About() {
           </h3>
           <ul className="text-white space-y-2">
             <li>
-              <span className="text-green">• Python:</span> Numpy, PyTorch, Pandas, Scikit-learn
+              <span className="text-green">• Python:</span> Numpy, PyTorch, Pandas, Scikit-learn, MatPlotLib
             </li>
             <li>
-              <span className="text-green">• JavaScript:</span> React, Node.js, TypeScript, NestJS
+              <span className="text-green">• JavaScript:</span> React, Node.js, TypeScript, NestJS, Tailwind
+            </li>
+            <li>
+              <span className="text-green">• Other Languages:</span> Java, C, R, Scala
             </li>
             <li>
               <span className="text-green">• SQL:</span> MySQL, Prisma, Database Management
