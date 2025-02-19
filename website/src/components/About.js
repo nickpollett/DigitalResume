@@ -58,27 +58,27 @@ export default function About() {
           <h3 className="text-2xl font-bold text-white font-playfair mb-4">
             Technical Skills
           </h3>
-          <ul className="text-white space-y-2">
+          <ul className="text-white space-y-2 pl-4">
             <li>
-              <span className="text-green">• Python:</span> Numpy, PyTorch, Pandas, Scikit-learn, MatPlotLib
+              <span className="text-green">Python:</span> Numpy, PyTorch, Pandas, Scikit-learn, MatPlotLib
             </li>
             <li>
-              <span className="text-green">• JavaScript:</span> React, Node.js, TypeScript, NestJS, Tailwind
+              <span className="text-green">JavaScript:</span> React, Node.js, TypeScript, NestJS, Tailwind
             </li>
             <li>
-              <span className="text-green">• Other Languages:</span> Java, C, R, Scala
+              <span className="text-green">Other Languages:</span> Java, C, R, Scala
             </li>
             <li>
-              <span className="text-green">• SQL:</span> MySQL, Prisma, Database Management
+              <span className="text-green">SQL:</span> MySQL, Prisma, Database Management
             </li>
             <li>
-              <span className="text-green">• Cloud & DevOps:</span> AWS, GCP, Docker, Git, Linux
+              <span className="text-green">Cloud & DevOps:</span> AWS, GCP, Docker, Git, Linux
             </li>
             <li>
-              <span className="text-green">• Cybersecurity:</span> ISO 27001, PCI DSS Compliance
+              <span className="text-green">Cybersecurity:</span> ISO 27001, PCI DSS Compliance
             </li>
             <li>
-              <span className="text-green">• Data Science:</span> GIS, Data Visualization, Machine Learning, Time Series Modeling
+              <span className="text-green">Data Science:</span> GIS, Data Visualization, Machine Learning, Time Series Modeling
             </li>
           </ul>
         </div>
@@ -88,13 +88,13 @@ export default function About() {
           <h3 className="text-2xl font-bold text-white font-playfair mb-4">
             Professional Skills
           </h3>
-          <ul className="text-white space-y-2">
-            <li><span className="text-green">•</span> RESTful API Development</li>
-            <li><span className="text-green">•</span> Testing & Debugging</li>
-            <li><span className="text-green">•</span> Data Structures & Algorithms</li>
-            <li><span className="text-green">•</span> Team Collaboration</li>
-            <li><span className="text-green">•</span> Time Management</li>
-            <li><span className="text-green">•</span> Attention to Detail</li>
+          <ul className="text-white space-y-2 pl-4">
+            <li><span className="text-green">RESTful API Development</span></li>
+            <li><span className="text-green">Testing & Debugging</span></li>
+            <li><span className="text-green">Data Structures & Algorithms</span></li>
+            <li><span className="text-green">Team Collaboration</span></li>
+            <li><span className="text-green">Time Management</span></li>
+            <li><span className="text-green">Attention to Detail</span></li>
           </ul>
         </div>
 
