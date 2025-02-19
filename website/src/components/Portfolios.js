@@ -50,50 +50,64 @@ const Portfolios = () => {
   ];
 
   const ProjectCard = ({ project, isLast }) => (
-    <div className={`p-6 ${!isLast ? 'relative' : ''} flex flex-col lg:flex-row gap-6`}> 
+    <div className={`p-4 md:p-6 ${!isLast ? 'relative' : ''} flex flex-col gap-4 md:gap-6`}> 
       {/* Custom Orange Border (if not last) */}
       {!isLast && (
-        <div className="absolute bottom-0 w-2/3 h-px bg-orange" />
+        <div className="absolute bottom-0 left-0 right-0 mx-auto w-5/6 md:w-11/12 h-px bg-orange" />
       )}
   
-      {/* Left section with text */}
-      <div className="lg:w-2/3">
-        <div className="flex items-center gap-2 mb-4">
-          <h3 className="font-playfair text-gold text-2xl font-semibold">{project.title}</h3>
-          <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-white hover:text-green hover:underline">
+      {/* Project Title and Links - Mobile Friendly */}
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 mb-2 md:mb-4">
+        <h3 className="font-playfair text-gold text-xl md:text-2xl font-semibold">{project.title}</h3>
+        <div className="flex flex-wrap gap-2">
+          <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="text-white hover:text-green hover:underline text-sm md:text-base">
             GitHub ↗
           </a>
           {project.websiteLink && (
-            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-white hover:text-green hover:underline">
+            <a href={project.websiteLink} target="_blank" rel="noopener noreferrer" className="text-white hover:text-green hover:underline text-sm md:text-base">
               Website ↗
             </a>
           )}
         </div>
-        <p className="font-montserrat p-3 bg-dark-gray bg-opacity-30 rounded-lg leading-relaxed text-white">
-          {project.description}
-        </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.technologies.map((tech, techIndex) => (
-            <span key={techIndex} className="bg-green bg-opacity-20 text-green px-3 py-1 rounded-full text-sm">
-              {tech}
-            </span>
-          ))}
-        </div>
       </div>
-  
-      {/* Right section with images */}
-      <div className="lg:w-1/3 flex justify-end items-start gap-2">
-        {project.images.map((image, index) => (
-          <img key={index} src={image} alt={`Project showcase ${index + 1}`} className="w-44 h-44 object-cover rounded-lg" />
-        ))}
+      
+      {/* Responsive Layout for Description and Images */}
+      <div className="flex flex-col lg:flex-row gap-4 md:gap-6">
+        {/* Left section with text */}
+        <div className="lg:w-2/3">
+          <p className="font-montserrat p-3 bg-dark-gray bg-opacity-30 rounded-lg leading-relaxed text-white text-sm md:text-base">
+            {project.description}
+          </p>
+          <div className="mt-3 md:mt-4 flex flex-wrap gap-1 md:gap-2">
+            {project.technologies.map((tech, techIndex) => (
+              <span key={techIndex} className="bg-green bg-opacity-20 text-green px-2 md:px-3 py-1 rounded-full text-xs md:text-sm">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+    
+        {/* Right section with images - adjust for mobile */}
+        {project.images.length > 0 && (
+          <div className="flex justify-center lg:justify-end items-center lg:items-start gap-2 lg:w-1/3">
+            {project.images.slice(0, 2).map((image, index) => (
+              <img 
+                key={index} 
+                src={image} 
+                alt={`Project showcase ${index + 1}`} 
+                className="w-36 h-36 md:w-44 md:h-44 object-cover rounded-lg" 
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
 
   return (
-    <div className="bg-dark-gray text-white p-6">
-      <section className="mb-12 bg-light-gray bg-opacity-10 rounded-lg">
-        <h2 className="font-playfair bg-green text-3xl font-bold w-full py-3 px-6 rounded-t-lg text-white">
+    <div className="bg-dark-gray text-white p-3 md:p-6">
+      <section className="mb-6 md:mb-12 bg-light-gray bg-opacity-10 rounded-lg">
+        <h2 className="font-playfair bg-green text-2xl md:text-3xl font-bold w-full py-2 md:py-3 px-4 md:px-6 rounded-t-lg text-white">
           Data Science and Visualization
         </h2>
         {dataScienceProjects.map((project, index) => (
@@ -101,7 +115,7 @@ const Portfolios = () => {
         ))}
       </section>
       <section className="bg-light-gray bg-opacity-10 rounded-lg">
-        <h2 className="font-playfair bg-green text-3xl font-bold w-full py-3 px-6 rounded-t-lg text-white">
+        <h2 className="font-playfair bg-green text-2xl md:text-3xl font-bold w-full py-2 md:py-3 px-4 md:px-6 rounded-t-lg text-white">
           Web Development
         </h2>
         {webDevelopmentProjects.map((project, index) => (
