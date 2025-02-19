@@ -50,7 +50,13 @@ const Portfolios = () => {
   ];
 
   const ProjectCard = ({ project, isLast }) => (
-    <div className={`p-6 ${!isLast ? 'border-b border-orange' : ''} flex flex-col lg:flex-row gap-6`}> 
+    <div className={`p-6 ${!isLast ? 'relative' : ''} flex flex-col lg:flex-row gap-6`}> 
+      {/* Custom Orange Border (if not last) */}
+      {!isLast && (
+        <div className="absolute bottom-0 w-2/3 h-px bg-orange" />
+      )}
+  
+      {/* Left section with text */}
       <div className="lg:w-2/3">
         <div className="flex items-center gap-2 mb-4">
           <h3 className="font-playfair text-gold text-2xl font-semibold">{project.title}</h3>
@@ -74,6 +80,8 @@ const Portfolios = () => {
           ))}
         </div>
       </div>
+  
+      {/* Right section with images */}
       <div className="lg:w-1/3 flex justify-end items-start gap-2">
         {project.images.map((image, index) => (
           <img key={index} src={image} alt={`Project showcase ${index + 1}`} className="w-44 h-44 object-cover rounded-lg" />
