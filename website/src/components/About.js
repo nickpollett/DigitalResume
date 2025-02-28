@@ -13,8 +13,9 @@ export default function About() {
 
   return (
     <div className="p-4 md:p-8 bg-dark-gray">
-      <div className="flex flex-col md:flex-row gap-8 mb-8">
-        <div className="w-full md:w-1/2 relative overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Image Carousel Panel */}
+        <div className="relative overflow-hidden rounded-lg">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
@@ -40,7 +41,9 @@ export default function About() {
             ))}
           </div>
         </div>
-        <div className="w-full md:w-1/2 bg-light-gray bg-opacity-20 rounded-lg p-6">
+
+        {/* About Nick Panel */}
+        <div className="bg-light-gray bg-opacity-20 rounded-lg p-6">
           <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white font-playfair">
             About Nick
           </h2>
@@ -73,11 +76,8 @@ export default function About() {
             When I’m not working on projects you can find me training for triathlon, playing board games, enjoying third-wave coffee, or reading Tolkien.
           </p>
         </div>
-      </div>
 
-      {/* Bottom Section: Combined Skills and Experience */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* Technical Skills Card */}
+        {/* Technical Skills Panel */}
         <div className="bg-light-gray bg-opacity-20 rounded-lg p-6">
           <h4 className="text-3xl font-bold text-white font-playfair mb-4">
             Technical Skills
@@ -87,13 +87,13 @@ export default function About() {
               <span className="text-gold">Python:</span> Numpy, PyTorch, Pandas, Scikit-learn, MatPlotLib
             </li>
             <li>
-              <span className="text-gold">JavaScript:</span> React, Node.js, TypeScript, NestJS, Tailwind
+              <span className="text-gold">Web:</span> Javascript, React, Node.js, TypeScript, NestJS, Tailwind
             </li>
             <li>
               <span className="text-gold">Other Languages:</span> Java, C, R, Scala
             </li>
             <li>
-              <span className="text-gold">SQL:</span> MySQL, Prisma, Database Management
+              <span className="text-gold">Database:</span> SQL, Prisma, Database Management
             </li>
             <li>
               <span className="text-gold">Cloud & DevOps:</span> AWS, GCP, Docker, Git, Linux
@@ -107,22 +107,7 @@ export default function About() {
           </ul>
         </div>
 
-        {/* Professional Skills Card */}
-        <div className="bg-light-gray bg-opacity-20 rounded-lg p-6">
-          <h4 className="text-3xl font-bold text-white font-playfair mb-4">
-            Professional Skills
-          </h4>
-          <ul className="text-white space-y-2">
-            <li><span>RESTful API Development</span></li>
-            <li><span>Testing & Debugging</span></li>
-            <li><span>Data Structures & Algorithms</span></li>
-            <li><span>Team Collaboration</span></li>
-            <li><span>Time Management</span></li>
-            <li><span>Attention to Detail</span></li>
-          </ul>
-        </div>
-
-        {/* Experience Card */}
+        {/* Experience Panel */}
         <div className="bg-light-gray bg-opacity-20 rounded-lg p-6">
           <h4 className="text-3xl font-bold text-white font-playfair mb-4">
             Experience

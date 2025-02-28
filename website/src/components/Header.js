@@ -1,3 +1,5 @@
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram, FaFilePdf } from 'react-icons/fa';
+
 export default function Header() {
   return (
     <header className="bg-green text-white py-4 md:py-8">
@@ -14,34 +16,44 @@ export default function Header() {
         <a
           href="https://www.linkedin.com/in/nicholas-pollett-2a7692234/"
           className="hover:opacity-75 transition-opacity duration-200"
+          aria-label="LinkedIn"
         >
-          LinkedIn
+          <FaLinkedin className="w-6 h-6" />
         </a>
         <a
           href="https://github.com/nickpollett/portfolio"
           className="hover:opacity-75 transition-opacity duration-200"
+          aria-label="GitHub"
         >
-          GitHub
+          <FaGithub className="w-6 h-6" />
         </a>
         <a
           href="mailto:nicholaspollett@hotmail.com"
           className="hover:opacity-75 transition-opacity duration-200"
+          aria-label="Email"
         >
-          Email
+          <FaEnvelope className="w-6 h-6" />
         </a>
         <a
           href="https://instagram.com/nickpollett"
           className="hover:opacity-75 transition-opacity duration-200"
+          aria-label="Instagram"
         >
-          Instagram
+          <FaInstagram className="w-6 h-6" />
         </a>
+        <div className="relative group">
         <a
           href="/resume.pdf"
           className="hover:opacity-75 transition-opacity duration-200"
           download="Resume.pdf"
+          aria-label="Resume"
         >
-          Resume
+          <FaFilePdf className="w-6 h-6" />
         </a>
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          Resumé
+        </div>
+      </div>
       </nav>
       
       {/* Mobile Navigation */}
@@ -49,33 +61,38 @@ export default function Header() {
         <a
           href="https://www.linkedin.com/in/nicholas-pollett-2a7692234/"
           className="hover:opacity-75 transition-opacity duration-200"
+          aria-label="LinkedIn"
         >
-          LinkedIn
+          <FaLinkedin className="w-6 h-6" />
         </a>
         <a
           href="https://github.com/nickpollett/portfolio"
           className="hover:opacity-75 transition-opacity duration-200"
+          aria-label="GitHub"
         >
-          GitHub
+          <FaGithub className="w-6 h-6" />
         </a>
         <a
           href="mailto:nicholaspollett@hotmail.com"
           className="hover:opacity-75 transition-opacity duration-200"
+          aria-label="Email"
         >
-          Email
+          <FaEnvelope className="w-6 h-6" />
         </a>
         <a
           href="https://instagram.com/nickpollett"
           className="hover:opacity-75 transition-opacity duration-200"
+          aria-label="Instagram"
         >
-          Instagram
+          <FaInstagram className="w-6 h-6" />
         </a>
         <a
           href="/resume.pdf"
           className="hover:opacity-75 transition-opacity duration-200"
           download="Resume.pdf"
+          aria-label="Resume"
         >
-          Resume
+          <FaFilePdf className="w-6 h-6" />
         </a>
       </nav>
     </header>
