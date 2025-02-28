@@ -125,7 +125,7 @@ const Portfolios = () => {
       </div>
       <div className="flex flex-col lg:flex-row gap-4 flex-grow h-full">
         <div className="w-full lg:w-2/3 flex flex-col h-full">
-          <p className="font-montserrat bg-dark-gray bg-opacity-30 rounded-lg leading-relaxed text-white text-sm md:text-base flex-1">
+          <p className="font-montserrat rounded-lg leading-relaxed text-white text-sm md:text-base flex-1">
             {project.description}
           </p>
           <div className="pt-4">
@@ -158,8 +158,7 @@ const Portfolios = () => {
       </div>
     </div>
   );
-  
-  
+
 
   return (
     <div className="bg-dark-gray text-white p-3 md:p-6">
